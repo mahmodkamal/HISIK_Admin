@@ -5,6 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [{
   path:'',
   component:AccountsComponent,
+  data:{
+    title:'Accounts',
+  }
 }];
 
 @NgModule({

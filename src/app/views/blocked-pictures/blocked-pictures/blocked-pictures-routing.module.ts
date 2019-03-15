@@ -5,7 +5,10 @@ import { BlockedPicturesComponent } from '../blocked-pictures.component';
 const routes: Routes = [{
   path : '',
   component:BlockedPicturesComponent,
-  
+  data:{
+    title:'Blocked-Pictures',
+  }
+
 }];
 
 @NgModule({
