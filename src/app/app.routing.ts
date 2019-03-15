@@ -67,21 +67,23 @@ export const routes: Routes = [
         loadChildren: './views/dashboard/dashboard.module#DashboardModule'
       },
       {
-        path: 'icons',
-        loadChildren: './views/icons/icons.module#IconsModule'
+        path:'accounts',
+        loadChildren:'./views/accounts/accounts.module#AccountsModule'
       },
       {
-        path: 'notifications',
-        loadChildren: './views/notifications/notifications.module#NotificationsModule'
+        path:'admins',
+        loadChildren:'./views/admins/adminss/adminss.module#AdminssModule'
       },
       {
-        path: 'theme',
-        loadChildren: './views/theme/theme.module#ThemeModule'
+        path:'blocked',
+        loadChildren:'./views/blocked-pictures/blocked-pictures/blocked-pictures.module#BlockedPicturesModule'
       },
       {
-        path: 'widgets',
-        loadChildren: './views/widgets/widgets.module#WidgetsModule'
-      }
+        path:'reports',
+        loadChildren:'./views/reports/reports/reports.module#ReportsModule',
+      },
+
+
     ]
   },
   { path: '**', component: P404Component }
