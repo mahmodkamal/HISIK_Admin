@@ -20,6 +20,19 @@ export const navItems: NavData[] = [
     name:'Admins',
     url:'/admins',
     icon:'icon-user',
+    children:[
+      {
+        name:'Messages',
+        url:'/admins/messages',
+        icon:'icon-bubble',
+      },
+      {
+        name:'Admins',
+        url:'/admins',
+        icon:'icon-user'
+
+      }
+    ]
   },
   {
     title: true,
@@ -29,6 +42,18 @@ export const navItems: NavData[] = [
     name:'Accounts',
     url:'/accounts',
     icon:'icon-people',
+    children:[
+      {
+        name:'Users',
+        url:'/accounts/users',
+        icon:'icon-user-following'
+      },
+      {
+        name:'Visitors',
+        url:'/accounts/visitors',
+        icon:'icon-user-follow'
+      },
+    ]
   },
   {
     name:'Reports',
@@ -38,7 +63,7 @@ export const navItems: NavData[] = [
   {
     name:'Blocked-Pictures',
     url:'/blocked',
-    icon:'icon-picture',
+    icon:'icon-camera',
   },
 
   {

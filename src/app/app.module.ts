@@ -43,6 +43,9 @@ import { AccountsComponent } from './views/accounts/accounts.component';
 import { AdminsComponent } from './views/admins/admins.component';
 import { ReportsComponent } from './views/reports/reports.component';
 import { BlockedPicturesComponent } from './views/blocked-pictures/blocked-pictures.component';
+import { MessagesComponent } from './views/admins/messages/messages.component';
+
+
 
 @NgModule({
   imports: [
@@ -65,6 +68,9 @@ import { BlockedPicturesComponent } from './views/blocked-pictures/blocked-pictu
     P500Component,
     LoginComponent,
     RegisterComponent,
+
+   
+
   ],
   providers: [{
     provide: LocationStrategy,
