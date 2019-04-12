@@ -1,3 +1,4 @@
+import { UserServiceService } from './../../services/users/user-service.service';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +15,9 @@ import { SharedModule } from '../shared/holder/shared.module';
     CommonModule,
     AccountsRoutingModule,
     SharedModule,
+  ],
+  providers:[
+    UserServiceService
   ]
 
 })

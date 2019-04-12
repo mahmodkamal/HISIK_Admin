@@ -1,3 +1,4 @@
+import { MessagesServiceService } from './../../../services/Messages/messages-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messages.component.scss']
 })
 export class MessagesComponent implements OnInit {
-
-  constructor() { }
+messages ;
+  constructor(private messService :MessagesServiceService) { }
 
   ngOnInit() {
+    this.messService.getMessages().subscribe(data=>{
+      this.messages = data ;
+      console.log(this.messages)
+    })
   }
 
 }

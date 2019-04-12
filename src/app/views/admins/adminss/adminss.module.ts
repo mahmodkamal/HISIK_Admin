@@ -1,3 +1,4 @@
+import { AdminServiceService } from './../../../services/Admin/admin-service.service';
 
 import { AdminsComponent } from './../admins.component';
 import { NgModule } from '@angular/core';
@@ -20,6 +21,9 @@ import { SharedModule } from '../../shared/holder/shared.module';
   ]
   ,exports:[
     
+  ],
+  providers:[
+    AdminServiceService
   ]
 })
 export class AdminssModule { }

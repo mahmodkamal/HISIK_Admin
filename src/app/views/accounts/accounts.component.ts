@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accounts.component.scss']
 })
 export class AccountsComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

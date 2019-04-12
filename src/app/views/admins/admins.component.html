@@ -1,18 +1,7 @@
  <div class="row">
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'SuperUser'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'SuperUser'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'SuperUser'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'SuperUser'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'SuperUser'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
+
+    <div class="col-sm-6 col-md-4" *ngFor="let admin of admins">
+        <holder UserName={{admin.Name}} email={{admin.Email}} ip={{admin.IP}} [type]="'SuperUser'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
     </div>
  
  </div>

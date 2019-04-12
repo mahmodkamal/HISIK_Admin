@@ -1,18 +1,6 @@
  <div class="row">
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'User'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
+    <div class="col-sm-6 col-md-4" *ngFor="let user of users">
+        <holder UserName={{user.UserName}} email={{user.Email}} ip={{user.IP}} [type]="'User'"  image=imageurl ></holder>
     </div>
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'User'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'User'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'User'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <holder [UserName]="'mahmodkamal'" [email]="'mahmodkamal167@gmail.com'" [ip]="'127.0.0.1'" [type]="'User'" [image]="'assets/img/avatars/pp.jpeg'" ></holder>
-    </div>
- 
+
  </div>
