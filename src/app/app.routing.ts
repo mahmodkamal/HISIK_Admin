@@ -70,6 +70,10 @@ export const routes: Routes = [
         path:'reports',
         loadChildren:'./views/reports/reports/reports.module#ReportsModule',
       },
+      {
+        path:'products',
+        loadChildren:'./views/product/product.module#ProductModule',
+      },
 
 
     ]

@@ -65,6 +65,28 @@ export const navItems: NavData[] = [
     url:'/blocked',
     icon:'icon-camera',
   },
+  {
+    name:'Products',
+    url:'/products',
+    icon:'icon-badge',
+    children:[
+      {
+        name:'AddProduct',
+        url:'/products/AddProduct',
+        icon:'icon-plus'
+      },
+      {
+        name:'AddPrand',
+        url:'/products/AddPrand',
+        icon:'icon-plus'
+      },
+      {
+        name:'AddCategory',
+        url:'/products/AddCategory',
+        icon:'icon-plus'
+      }
+    ]
+  },
 
   {
     divider: true

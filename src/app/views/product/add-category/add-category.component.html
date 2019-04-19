@@ -1,0 +1,37 @@
+
+<div class="col-lg-12">
+
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Categories
+        </div>
+         <form #form="ngForm">
+         <div class="input-group ">
+                    <span class="input-group-prepend">
+                    <button type="submit" (click)="addCategory(form)" class="btn btn-primary"><i class="plus"></i>Add</button>
+                  </span>
+                  <input type="text" ngModel id="input1-group2" name="category" class="form-control" placeholder="Category Name" >
+                  
+            </div>
+               </form>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Category name</th>
+                
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cat of categories|async">
+                <td>{{cat.Name}}</td>
+                <td>
+                  <span class="badge badge-success">Availabel</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>

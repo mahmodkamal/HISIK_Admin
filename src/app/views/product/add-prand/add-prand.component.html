@@ -1,0 +1,33 @@
+<div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Prands
+        </div>
+        <form #form="ngForm" >
+          <div class="input-group">
+                  <span class="input-group-prepend">
+                    <button type="button"(click)="addPrand(form)" class="btn btn-primary"><i class="plus"></i>Add</button>
+                  </span>
+                  <input type="text" ngModel id="input1-group2" name="Prand" class="form-control" placeholder="Prand Name">
+          </div>
+          </form>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Prand name</th>    
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let prand of prands">
+                <td>{{prand.Name}}</td>
+                <td>
+                  <span class="badge badge-success">Available</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>

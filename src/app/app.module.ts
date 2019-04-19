@@ -33,6 +33,7 @@ import {
   AppHeaderModule,
   AppFooterModule,
   AppSidebarModule,
+
   
 } from '@coreui/angular';
 
@@ -40,6 +41,8 @@ import {
 import { AppRoutingModule } from './app.routing';
 
 // Import 3rd party components
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
@@ -48,12 +51,26 @@ import { AdminsComponent } from './views/admins/admins.component';
 import { ReportsComponent } from './views/reports/reports.component';
 import { BlockedPicturesComponent } from './views/blocked-pictures/blocked-pictures.component';
 import { MessagesComponent } from './views/admins/messages/messages.component';
+import { ProductComponent } from './views/product/product.component';
+import { AddProductComponent } from './views/product/add-product/add-product.component';
+import { AddPrandComponent } from './views/product/add-prand/add-prand.component';
+import { AddCategoryComponent } from './views/product/add-category/add-category.component';
+import * as firebase from 'firebase/app';
+import { FormsModule }   from '@angular/forms';
 
-
-
+var config = {
+  apiKey: "AIzaSyBYThMrbjOwXLTksqVd2zWKmwH86nfbydg",
+  authDomain: "ionic-763e1.firebaseapp.com",
+  databaseURL: "https://ionic-763e1.firebaseio.com",
+  projectId: "ionic-763e1",
+  storageBucket: "ionic-763e1.appspot.com",
+  messagingSenderId: "543642243705"
+};
+firebase.initializeApp(config);
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
@@ -64,7 +81,10 @@ import { MessagesComponent } from './views/admins/messages/messages.component';
     HttpClientModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+   
+   
+
   ],
   declarations: [
     AppComponent,
@@ -73,6 +93,7 @@ import { MessagesComponent } from './views/admins/messages/messages.component';
     P500Component,
     LoginComponent,
     RegisterComponent,
+
     
 
    
