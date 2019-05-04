@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+import { NotficationService } from '../../services/notfication/notfication.service';
 
 @Component({
   templateUrl: 'dashboard.component.html'
@@ -377,7 +378,11 @@ export class DashboardComponent implements OnInit {
   public random(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-
+  Notfication;
+  constructor(private NotSer:NotficationService)
+  {
+    
+  }
   ngOnInit(): void {
     // generate random values for mainChart
     for (let i = 0; i <= this.mainChartElements; i++) {
@@ -385,5 +390,8 @@ export class DashboardComponent implements OnInit {
       this.mainChartData2.push(this.random(80, 100));
       this.mainChartData3.push(65);
     }
+
+   
+  
   }
 }

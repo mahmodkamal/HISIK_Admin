@@ -1,19 +1,22 @@
 import { Component, OnDestroy, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { navItems } from './../../_nav';
+import { NotficationService } from '../../services/notfication/notfication.service';
+import { PushService } from '../../services/notfication/pushnot/push.service';
 
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './default-layout.component.html'
 })
-export class DefaultLayoutComponent implements OnDestroy {
+export class DefaultLayoutComponent implements OnDestroy  {
   public navItems = navItems;
   public sidebarMinimized = true;
   private changes: MutationObserver;
   public element: HTMLElement;
+  Notfication;
+  
   constructor(@Inject(DOCUMENT) _document?: any) {
-
     this.changes = new MutationObserver((mutations) => {
       this.sidebarMinimized = _document.body.classList.contains('sidebar-minimized');
     });
@@ -22,9 +25,11 @@ export class DefaultLayoutComponent implements OnDestroy {
       attributes: true,
       attributeFilter: ['class']
     });
+
   }
 
   ngOnDestroy(): void {
     this.changes.disconnect();
   }
+
 }

@@ -1,3 +1,4 @@
+import { NotficationService } from './../../services/notfication/notfication.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private notSer:NotficationService) { }
 
+  Notfication;
   ngOnInit() {
+  
+    const userId = 'user001';
+    this.notSer.requestPermission(userId)
+    this.notSer.receiveMessage()
+    this.Notfication = this.notSer.currentMessage
+  
   }
 
 }

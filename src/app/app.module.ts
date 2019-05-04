@@ -1,3 +1,4 @@
+import { NotficationService } from './services/notfication/notfication.service';
 import { HttpServiceService } from './services/Http/http-service.service';
 import { AdminServiceService } from './services/Admin/admin-service.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -41,8 +42,8 @@ import {
 import { AppRoutingModule } from './app.routing';
 
 // Import 3rd party components
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
@@ -57,8 +58,15 @@ import { AddPrandComponent } from './views/product/add-prand/add-prand.component
 import { AddCategoryComponent } from './views/product/add-category/add-category.component';
 import * as firebase from 'firebase/app';
 import { FormsModule }   from '@angular/forms';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AsyncPipe } from '../../node_modules/@angular/common';
 
 var config = {
+  production: false,
   apiKey: "AIzaSyBYThMrbjOwXLTksqVd2zWKmwH86nfbydg",
   authDomain: "ionic-763e1.firebaseapp.com",
   databaseURL: "https://ionic-763e1.firebaseio.com",
@@ -82,6 +90,10 @@ firebase.initializeApp(config);
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireMessagingModule,
+    AngularFireModule.initializeApp(config),
    
    
 
