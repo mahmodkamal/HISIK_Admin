@@ -74,6 +74,9 @@ var config = {
   storageBucket: "ionic-763e1.appspot.com",
   messagingSenderId: "543642243705"
 };
+// "reponame" HISIK_Admin
+// ng build --prod --base-href https://mahmodkamal.github.io/HISIK_Admin/ 
+// ngh -no-silent
 firebase.initializeApp(config);
 @NgModule({
   imports: [

@@ -1,14 +1,17 @@
-import { HolderComponent } from './../holder.component';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HolderRoutingModule } from './holder-routing.module';
 
 @NgModule({
-  declarations: [HolderComponent],
+  declarations: [],
   imports: [
     CommonModule,
     HolderRoutingModule
+  ]
+  ,exports:[
+    
   ]
 })
 export class HolderModule { }

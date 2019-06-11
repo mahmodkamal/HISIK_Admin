@@ -114,9 +114,11 @@ addProduct(from:NgForm)
         "review":1,
         "title":'Admin Notfication , New Product Added '+ LastProd.name,
       }
+
      this.PushNot.pushNotfiation(Body).subscribe(data=>{
       console.log(data);
     });
+    this.PushNot.PushGeneralNotfiation('new Product Added',LastProd.name)
     this.PushNot.addNotfication(NotficationBody).subscribe(lastnot=>{
       this.NOt = lastnot;
       console.log(this.NOt);
