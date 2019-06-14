@@ -1,7 +1,7 @@
 import { HttpServiceService } from './../Http/http-service.service';
 import { Injectable } from '@angular/core';
 
-const END_POINT = 'http://localhost:8000/api/product/';
+const END_POINT = 'http://mostafaaziema.pythonanywhere.com/api/product/';
 @Injectable({
   providedIn: 'root'
 })

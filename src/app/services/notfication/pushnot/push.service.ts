@@ -4,7 +4,7 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const pushEndPoint = 'https://fcm.googleapis.com/fcm/send';
-const NotEndPoint = 'http://localhost:8000/api/Noitifaction/';
+const NotEndPoint = 'http://mostafaaziema.pythonanywhere.com/api/adminNoitifaction/';
 const PushHeaders = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
