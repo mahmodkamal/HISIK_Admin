@@ -285,6 +285,8 @@ Apache-2.0
  
 
 
+firebase/app
+
 @firebase/polyfill
 Apache-2.0
 
@@ -431,8 +433,6 @@ MIT
 
 @angular/platform-browser
 MIT
-
-firebase/app
 
 @angular/router
 MIT
