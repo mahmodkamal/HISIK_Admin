@@ -1,10 +1,11 @@
+import { environment } from './../../../../environments/environment';
 import { Notfication } from './../../../calsses/notfication';
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const pushEndPoint = 'https://fcm.googleapis.com/fcm/send';
-const NotEndPoint = 'http://mostafaaziema.pythonanywhere.com/api/userNoitifaction/';
+const NotEndPoint = environment.apiUrl+'/api/userNoitifaction/';
 const PushHeaders = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
