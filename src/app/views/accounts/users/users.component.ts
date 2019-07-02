@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
   users :any = []
-  imageurl = "'assets/img/avatars/pp.jpeg'";
+  imageurl = "assets/img/avatars/pp.jpeg";
   constructor(private userService:UserServiceService) { }
 
   ngOnInit() {

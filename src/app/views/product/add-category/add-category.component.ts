@@ -9,19 +9,19 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./add-category.component.scss']
 })
 export class AddCategoryComponent implements OnInit {
-
+  error;
+  categories;
   constructor(private catService:CategoryService) { 
     this.categories = this.catService.getCategory();
   }
-  error;
-  categories;
+ 
   ngOnInit() {
     
   }
   addCategory(f :NgForm){
     this.catService.addCategory({"Name":f.value.category}).subscribe(result=>{
       console.log(result);
-      this.categories.push(result);
+      // this.categories.push(result);
     },error=>{
       this.error = error;
     });

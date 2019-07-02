@@ -106,7 +106,7 @@ addProduct(from:NgForm)
        "to" : "cK1gZi-Hkgo:APA91bHOiUevUN5DgI7tQVVClDE5XokVTlwdsGO4SclT4sj6j5Q5NrQ0g-XsxjIEF6D-2J_l2T7zPowrq7xF-xlLPaBSQLfbFk8TY4jqobLtUGEpiA2HX8o0ptOtZq3GifOXktWTC02b"
        
       }
-      const NotficationBody = {
+      let NotficationBody = {
         "status":true,
         "Type":1,
         "user":1,
@@ -116,10 +116,19 @@ addProduct(from:NgForm)
       }
 
      this.PushNot.pushNotfiation(Body).subscribe(data=>{
-      console.log(data);
+      console.log(data,'plaaaaaaaah');
     });
-    this.PushNot.PushGeneralNotfiation('new Product Added',LastProd.name)
-    this.PushNot.addNotfication(NotficationBody).subscribe(lastnot=>{
+    this.PushNot.PushGeneralNotfiation('new Product Added',LastProd.name).subscribe((data)=>{
+      console.log(data);
+    })
+    this.PushNot.addNotfication({
+        "status":true,
+        "Type":1,
+        "user":1,
+        "product":LastProd.id,
+        "review":"",
+        "title":'Admin Notfication , New Product Added '+ LastProd.name,
+      }).subscribe(lastnot=>{
       this.NOt = lastnot;
       console.log(this.NOt);
     })

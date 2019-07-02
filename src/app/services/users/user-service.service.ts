@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 
 
-const END_POINT = 'http://localhost:8000/api/user/';
+const END_POINT = 'http://mostafaaziema.pythonanywhere.com/api/user/';
 @Injectable({
   providedIn: 'root'
 })
